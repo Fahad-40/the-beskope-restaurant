@@ -4,18 +4,7 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --color-bg: #131313;
-            --color-surface: #201f1f;
-            --color-surface-high: #353534;
-            --color-primary: #f1c97d;
-            --color-primary-dark: #d4ad65;
-            --color-text: #e5e2e1;
-            --color-text-muted: #d0c5af;
-            --font-headline: 'Noto Serif', serif;
-            --font-body: 'Manrope', sans-serif;
-            --transition: all 0.3s ease;
-        }
+
 
         body {
             background-color: var(--color-bg);
