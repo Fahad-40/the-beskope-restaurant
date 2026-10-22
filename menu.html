@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Menu — Zafran</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&amp;family=Manrope:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols for the Shopping Bag Icon -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+
+   
+</head>
+
+<body>
+
+
+    <!-- ═══════════════ HEADER ═══════════════ -->
+    <!-- <header class="site-header">
+        <div class="logo">The Bespoke Gastronomy</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a class="active" href="menu.html">Menu</a>
+            <a href="reservation.html">Reservations</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="reservation.html"><button class="btn-gold">Book a Table</button></a>
+    </header> -->
+
+    <header class="site-header">
+            <a href="index.html"> <div class="logo">The Bespoke Gastronomy</div></a>   
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a class="active" href="menu.html">Menu</a>
+            <a href="reservation.html">Reservations</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-cta">
+            <a href="reservation.html"><button class="btn-gold">Book a Table</button></a>
+        </div>
+        <button class="mobile-toggle" id="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <nav class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservations</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+
+
+    <!-- ═══════════════ STANDALONE FIXED BASKET ICON ═══════════════ -->
+    <button aria-label="View shopping bag" class="basket-trigger-fixed" id="cart-trigger">
+        <span class="material-symbols-outlined" style="font-size: 26px;">shopping_bag</span>
+        <span class="basket-count">0</span>
+    </button>
+    <!-- ═══════════════ SIDE CART DRAWER ═══════════════ -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Selection</h2>
+            <button aria-label="Close cart" class="cart-close" id="cart-close">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="cart-body">
+            <!-- Empty State -->
+            <div class="cart-empty" id="cart-empty">
+                <span class="material-symbols-outlined">shopping_basket</span>
+                <p>Your selection is currently empty</p>
+            </div>
+            <div id="cart-items-container">
+                <!-- Cart items would be injected here -->
+            </div>
+        </div>
+        <div class="cart-footer">
+          <a href="checkout.html"><button class="review-btn">Review Selection →</button></a>  
+        </div>
+    </aside>
+    <!-- ═══════════════ MENU PAGE ═══════════════ -->
+    <div class="menu-page">
+        <aside class="sidebar">
+            <button aria-label="Close Categories" class="sidebar-close-mobile" id="mobile-sidebar-close">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <br>
+            <div class="sidebar-search">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewbox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+                </svg>
+                <input id="menu-search" placeholder="Search menu…" type="text" />
+            </div>
+            <ul class="sidebar-nav" id="sidebar-nav">
+                <li><a data-target="starters" href="#starters">Starters <span class="cat-count">7</span></a></li>
+                <li><a data-target="salads" href="#salads">Soups &amp; Salads <span class="cat-count">6</span></a></li>
+                <li><a data-target="mains" href="#mains">Main Course <span class="cat-count">7</span></a></li>
+                <li><a data-target="grills" href="#grills">Grills &amp; BBQ <span class="cat-count">6</span></a></li>
+                <div class="sidebar-divider"></div>
+                <li><a data-target="sides" href="#sides">Sides <span class="cat-count">5</span></a></li>
+                <li><a data-target="specials" href="#specials">Specials <span class="cat-count">5</span></a></li>
+                <li><a data-target="desserts" href="#desserts">Desserts <span class="cat-count">6</span></a></li>
+                <li><a data-target="beverages" href="#beverages">Beverages <span class="cat-count">6</span></a></li>
+            </ul>
+        </aside>
+
+
+        <main class="menu-content">
+            
+            <h1 class="menu-page-title">Our Menu</h1>
+            <p class="menu-page-sub">Crafted with passion · Served with elegance</p>
+<button class="mobile-category-toggle" id="mobile-sidebar-open">
+                <span class="material-symbols-outlined">menu_open</span>
+                Categories
+            </button>
+            <!-- STARTERS -->
+
+            <!-- SOUPS & SALADS -->
+
+            <!-- MAIN COURSE -->
+
+
+        </main>
+
+    </div>
+
+
+    <script src="JS/itemData.js"></script>
+    <script src="JS/cart.js"></script>
+    <script src="JS/renderItems.js"></script>
+
+    <!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+    <script>
+        // --- Cart Drawer Toggle ---
+        const cartTrigger = document.getElementById('cart-trigger');
+        const cartDrawer = document.getElementById('cart-drawer');
+        const cartOverlay = document.getElementById('cart-overlay');
+        const cartClose = document.getElementById('cart-close');
+
+        function toggleCart() {
+            cartDrawer.classList.toggle('active');
+            cartOverlay.classList.toggle('active');
+            document.body.style.overflow = cartDrawer.classList.contains('active') ? 'hidden' : '';
+        }
+
+        cartTrigger.addEventListener('click', toggleCart);
+        cartClose.addEventListener('click', toggleCart);
+        cartOverlay.addEventListener('click', toggleCart);
+
+        // --- Scroll Spy & Sidebar Logic ---
+
+
+        // --- Search Logic ---
+        const searchInput = document.getElementById('menu-search');
+        searchInput.addEventListener('input', () => {
+            const q = searchInput.value.trim().toLowerCase();
+            sections.forEach(sec => {
+                let anyVisible = false;
+                sec.querySelectorAll('.dish-card').forEach(card => {
+                    const text = card.innerText.toLowerCase();
+                    const show = !q || text.includes(q);
+                    card.style.display = show ? 'flex' : 'none';
+                    if (show) anyVisible = true;
+                });
+                sec.style.display = anyVisible ? 'block' : 'none';
+            });
+        });
+
+
+        // const mobileToggle = document.getElementById('mobile-toggle');
+        // const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        // const body = document.body;
+
+        // mobileToggle.addEventListener('click', () => {
+        //     mobileToggle.classList.toggle('active');
+        //     mobileMenuOverlay.classList.toggle('active');
+        //     body.classList.toggle('menu-open');
+        // });
+
+        // // Close menu on link click
+        // const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+        // mobileLinks.forEach(link => {
+        //     link.addEventListener('click', () => {
+        //         mobileToggle.classList.remove('active');
+        //         mobileMenuOverlay.classList.remove('active');
+        //         body.classList.remove('menu-open');
+        //     });
+        // });
+
+
+
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const body = document.body;
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            mobileMenuOverlay.classList.toggle('active');
+            body.classList.toggle('menu-open');
+        });
+
+        // Close menu on link click
+        const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+                body.classList.remove('menu-open');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.querySelector('.sidebar');
+            const openBtn = document.getElementById('mobile-sidebar-open');
+            const closeBtn = document.getElementById('mobile-sidebar-close');
+
+            const toggleSidebar = () => {
+                sidebar.classList.toggle('active');
+            };
+
+            if (openBtn) openBtn.addEventListener('click', toggleSidebar);
+            if (closeBtn) closeBtn.addEventListener('click', toggleSidebar);
+
+            // Close sidebar when clicking outside on mobile
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 900 && sidebar.classList.contains('active')) {
+                    if (!sidebar.contains(e.target) && !openBtn.contains(e.target)) {
+                        sidebar.classList.remove('active');
+                    }
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

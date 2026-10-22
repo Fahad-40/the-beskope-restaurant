@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Checkout | The Bespoke Gastronomy</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+<link rel="stylesheet" href="css/checkout.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+
+<body>
+       <header class="site-header">
+    <a href="index.html"> <div class="logo">The Bespoke Gastronomy</div></a>   
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a class="active" href="menu.html">Menu</a>
+            <a href="reservation.html">Reservations</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-cta">
+            <a href="reservation.html"><button class="btn-gold">Book a Table</button></a>
+        </div>
+        <button class="mobile-toggle" id="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <nav class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservations</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+        
+    <main>
+        <div class="left-col">
+            <section>
+                <h2 class="section-title">Fulfillment Method</h2>
+                <div class="toggle-group" id="fulfillment-toggle">
+                    <button class="toggle-btn active" data-method="delivery">Home Delivery</button>
+                    <button class="toggle-btn" data-method="collection">Restaurant Collection</button>
+                </div>
+                <input id="fulfillment-method" name="fulfillment_method" type="hidden" value="delivery" />
+            </section>
+            <section class="collapsible-content" id="delivery-section">
+                <h2 class="section-title">Delivery Address</h2>
+                <div class="input-group">
+                    <input id="addr1" placeholder=" " type="text" />
+                    <label for="addr1">Address Line 1</label>
+                    <span class="error-msg" id="addr1-error"></span> 
+                </div>
+                <div class="input-group">
+                    <input id="addr2" placeholder=" " type="text" />
+                    <label for="addr2">Address Line 2 (Optional)</label>
+                </div>
+                <div class="form-grid">
+                    <div class="input-group">
+                        <input id="postcode" placeholder=" " type="text" />
+                        <label for="postcode">Postcode</label>
+                         <span class="error-msg" id="postcode-error"></span> 
+                    </div>
+                    <div class="input-group">
+                        <input id="city" placeholder=" " type="text" />
+                        <label for="city">City</label>
+                         <span class="error-msg" id="city-error"></span> 
+                    </div>
+                </div>
+            </section>
+            <section class="collapsible-content hidden" id="collection-section">
+                <h2 class="section-title">Collection Point</h2>
+                <div class="collection-info">
+                    <h4>Mayfair Flagship</h4>
+                    <p>12 Bruton Place, London, W1J 6LT</p>
+                    <p style="margin-top: 1rem;">Collection available 12:00 PM — 10:00 PM. Please present your digital
+                        receipt upon arrival.</p>
+                </div>
+            </section>
+            <section>
+                <h2 class="section-title">Payment Method</h2>
+                <div class="payment-list" id="payment-selector">
+                    <div class="payment-option" data-value="apple_pay">
+                        <div class="payment-info">
+                            <span class="material-symbols-outlined">ios</span>
+                            <span class="method-name">Apple Pay</span>
+                        </div>
+                        <div class="radio-custom"></div>
+                    </div>
+                    <div class="payment-option selected" data-value="credit_card">
+                        <div class="payment-info">
+                            <span class="material-symbols-outlined">credit_card</span>
+                            <span class="method-name">Credit Card</span>
+                        </div>
+                        <div class="radio-custom"></div>
+                    </div>
+                    <div class="payment-option" data-value="luxury_credit">
+                        <div class="payment-info">
+                            <span class="material-symbols-outlined">diamond</span>
+                            <span class="method-name">Luxury Dining Credit</span>
+                        </div>
+                        <div class="radio-custom"></div>
+                    </div>
+                </div>
+                <input id="selected-payment" name="payment_method" type="hidden" value="credit_card" />
+            </section>
+        </div>
+        <aside>
+            <div class="order-summary">
+                <h3 class="summary-title">Order Summary</h3>
+                <div class="cart-items">
+                    <!-- <div class="cart-item">
+                        <div class="item-details">
+                            <p>Wagyu Beef Tartare</p>
+                            <span>Qty: 1</span>
+                        </div>
+                        <span class="item-price">£42.00</span>
+                    </div> -->
+                    <!-- <div class="cart-item">
+                        <div class="item-details">
+                            <p>Lobster Bisque</p>
+                            <span>Qty: 2</span>
+                        </div>
+                        <span class="item-price">£56.00</span>
+                    </div> -->
+                    <div class="cart-item">
+                        <div class="item-details">
+                            <p>2018 Vintage Bordeaux</p>
+                            <span>Qty: 1</span>
+                        </div>
+                        <span class="item-price">£185.00</span>
+                    </div>
+                </div>
+                <div class="summary-totals">
+                    <div class="total-row">
+                        <span>Subtotal</span>
+                        <span class="subTotal-text-span">£00.00</span>
+                    </div>
+                    <div class="total-row" id="delivery-fee-row">
+                        <span>Delivery Fee</span>
+                        <span class="delivery-text-span" >£00.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Service Charge (12.5%)</span>
+                        <span class="service-text-span">£00.00</span>
+                    </div>
+                    <div class="total-row grand-total">
+                        <span>Total</span>
+                        <span id="grand-total-amount">£00.00</span>
+                    </div>
+                </div>
+                <button class="checkout-btn">Confirm &amp; Place Order</button>
+                <p class="security-note">Secure Encryption • Discrete Delivery Guaranteed</p>
+            </div>
+        </aside>
+    </main>
+   <footer class="site-footer">
+        <div class="footer-info">
+            <div class="footer-logo">The Bespoke Gastronomy</div>
+            <address>
+                1244 Culinary Row, Mayfair, London, UK<br />
+                reservations@thebespoke.com<br />
+                +44 20 7946 0128
+            </address>
+        </div>
+        <div class="footer-nav-group">
+            <div class="nav-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Reservations</a></li>
+                    <li><a href="#">Private Events</a></li>
+                </ul>
+            </div>
+            <div class="nav-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="nav-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div>© 2026 The Bespoke Gastronomy. All rights reserved.</div>
+            <div class="footer-icons">
+                <span class="material-symbols-outlined">ac_unit</span>
+                <span class="material-symbols-outlined">filter_vintage</span>
+                <span class="material-symbols-outlined">auto_awesome</span>
+            </div>
+        </div>
+    </footer>
+    <script src="JS/checkout.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => {
+            // Fulfillment Toggle Logic
+            const toggleButtons = document.querySelectorAll('#fulfillment-toggle .toggle-btn');
+            const deliverySection = document.getElementById('delivery-section');
+            const collectionSection = document.getElementById('collection-section');
+            const fulfillmentInput = document.getElementById('fulfillment-method');
+            const deliveryFeeRow = document.getElementById('delivery-fee-row');
+            const grandTotalSpan = document.getElementById('grand-total-amount');
+
+            toggleButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const method = btn.getAttribute('data-method');
+
+                    // Update buttons
+                    toggleButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    // Update hidden input
+                    fulfillmentInput.value = method;
+renderOrderSummary()
+                    // Toggle visibility
+                    if (method === 'delivery') {
+                        deliverySection.classList.remove('hidden');
+                        collectionSection.classList.add('hidden');
+                        deliveryFeeRow.style.display = 'flex';
+                        // grandTotalSpan.textContent = '£333.38';
+                    } else {
+                        deliverySection.classList.add('hidden');
+                        collectionSection.classList.remove('hidden');
+                        deliveryFeeRow.style.display = 'none';
+                        // grandTotalSpan.textContent = '£318.38'; 
+                     renderOrderSummary()   
+                    }
+                });
+            });
+
+            // Payment Selection Logic
+            const paymentOptions = document.querySelectorAll('.payment-option');
+            const paymentInput = document.getElementById('selected-payment');
+
+            paymentOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    // Update visual state
+                    paymentOptions.forEach(opt => opt.classList.remove('selected'));
+                    option.classList.add('selected');
+
+                    // Update hidden input
+                    const value = option.getAttribute('data-value');
+                    paymentInput.value = value;
+                });
+            });
+
+            // Checkout Logic - Updated to ensure orderTime is set
+        });
+        
+         const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const body = document.body;
+
+    mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        mobileMenuOverlay.classList.toggle('active');
+        body.classList.toggle('menu-open');
+    });
+
+    // Close menu on link click
+    const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileToggle.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            body.classList.remove('menu-open');
+        });
+    });
+        
+        </script>
+</body>
+
+</html>
